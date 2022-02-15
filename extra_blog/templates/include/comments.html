@@ -1,0 +1,13 @@
+<form action="{% url 'comments' post.id %}" class="mb-5 tm-comment-form" method="post">
+    {% csrf_token %}
+    <h2 class="tm-color-primary tm-post-title mb-4">Комментарии</h2>
+    <div class="mb-4">
+        <input class="form-control" name="name" type="text">
+    </div>
+    <div class="mb-4">
+        <textarea class="form-control" name="content" rows="6"></textarea>
+    </div>
+    <div class="text-right">
+        <button class="tm-btn tm-btn-primary tm-btn-small">Submit</button>                        
+    </div>                                
+</form>
